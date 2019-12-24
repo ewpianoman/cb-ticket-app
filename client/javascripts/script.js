@@ -8,3 +8,14 @@ $(document).ready(function () {
     return this.href == url;
   }).append('<span class="sr-only">(current)</span>').parent().addClass('active');
 });
+
+// Handle Sign Up form Submit
+function addUser() {
+  let email = $('#email').val();
+  let password = $('#password').val();
+  let passwordConfirm = $('#password-confirm').val();
+
+  if (password != passwordConfirm) {
+    alert('Passwords must match.');
+  }
+}

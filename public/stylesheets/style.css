@@ -7142,14 +7142,14 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
   body .container {
     margin-top: 25px; }
-  body .sign-in {
+  body .sign-in, body .sign-up {
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
     background-color: #f8f9fa;
     padding: 25px;
     border-radius: 3px; }
-    body .sign-in h2 {
+    body .sign-in h2, body .sign-up h2 {
       margin-bottom: 15px; }
 
 a {
