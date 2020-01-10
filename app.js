@@ -22,14 +22,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(sassMiddleware({
-  src: path.join(__dirname, 'client'),
+  src: path.join(__dirname, 'src'),
   dest: path.join(__dirname, 'public'),
   indentedSyntax: true, // true = .sass and false = .scss
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/fonts', express.static(path.join(__dirname, 'node_modules/bootstrap-sass/assets/fonts')));
-app.use('/public/javascripts/bundle.js', browserify(__dirname + '/client/javascripts/script.js'));
+app.use('/public/javascripts/bundle.js', browserify(__dirname + '/src/javascripts/script.js'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
